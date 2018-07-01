@@ -10,9 +10,10 @@
 
 using namespace std;
 
+boost::circular_buffer<unsigned long long int> cb(MAX_BUFFER_SIZE);
+
 int main()
 {
-    boost::circular_buffer<unsigned long long int> cb(MAX_BUFFER_SIZE);
     for (auto i = 0; i < MAX_BUFFER_SIZE + 1; i++)
     {
         cb.push_back(i);
