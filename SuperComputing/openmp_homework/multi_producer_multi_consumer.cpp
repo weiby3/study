@@ -9,18 +9,18 @@
 #include <boost/progress.hpp>
 #include <omp.h>
 
-#define MAX_BUFFER_SIZE 100
+#define MAX_BUFFER_SIZE 1000
 #define MAX_THREADS_COUNT 8
-#define PRODUCER_MAX_KEY 10000
-#define CONSUMER_COUNT 4
-#define PRODUCER_COUNT 4
+#define PRODUCER_MAX_KEY 1000000llu
+#define CONSUMER_COUNT 4llu
+#define PRODUCER_COUNT 4llu
 #define THREADS_COUNT (CONSUMER_COUNT + PRODUCER_COUNT)
 
 using namespace std;
 
 boost::circular_buffer<int> cb(MAX_BUFFER_SIZE);
 omp_lock_t lock;
-int sum_array[CONSUMER_COUNT];
+unsigned long long sum_array[CONSUMER_COUNT];
 
 void consumer(int idx);
 void producer();
@@ -39,15 +39,15 @@ int main()
         else
             producer();
     omp_destroy_lock(&lock);
-    printf("All sum actually is %d, expect is %d.", accumulate(sum_array, sum_array + CONSUMER_COUNT, 0), PRODUCER_MAX_KEY / 2 * (PRODUCER_MAX_KEY - 1) * PRODUCER_COUNT);
-    cout << "All " << omp_get_num_threads() << " threads use ";
+    printf("All sum actually is %llu, expect is %llu.\n", accumulate(sum_array, sum_array + CONSUMER_COUNT, 0llu), PRODUCER_MAX_KEY / 2 * (PRODUCER_MAX_KEY - 1) * PRODUCER_COUNT);
+    cout << "All " << omp_get_max_threads() << " threads use ";
 }
 
 void consumer(int idx)
 {
     boost::progress_timer progress;
     printf("Consumer %d prepare to consume items.\n", omp_get_thread_num());
-    int sum = 0;
+    unsigned long long sum = 0;
     for (auto i = 0; i != PRODUCER_MAX_KEY * PRODUCER_COUNT / CONSUMER_COUNT; i++)
     {
         omp_set_lock(&lock);
@@ -63,7 +63,7 @@ void consumer(int idx)
         omp_unset_lock(&lock);
     }
     sum_array[idx] = sum;
-    printf("Consumer %d consumed %d items, local sum is %d, use ", omp_get_thread_num(), PRODUCER_MAX_KEY * PRODUCER_COUNT / CONSUMER_COUNT, sum);
+    printf("Consumer %d consumed %llu items, local sum is %llu, use ", omp_get_thread_num(), PRODUCER_MAX_KEY * PRODUCER_COUNT / CONSUMER_COUNT, sum);
 }
 
 void producer()
@@ -83,5 +83,5 @@ void producer()
         }
         omp_unset_lock(&lock);
     }
-    printf("Producer %d produced %d items, use ", omp_get_thread_num(), PRODUCER_MAX_KEY);
+    printf("Producer %d produced %llu items, use ", omp_get_thread_num(), PRODUCER_MAX_KEY);
 }
