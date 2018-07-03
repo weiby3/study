@@ -3,6 +3,7 @@
 
 #include <cstdio>
 #include <climits>
+#include <iostream>
 #include <omp.h>
 #include <boost/progress.hpp>
 
@@ -16,9 +17,7 @@ using namespace std;
 #endif
 
 // Number of vertices in the graph
-#define V 5000
-
-#include "data.txt"
+#define V 1250
 
 // A utility function to find the vertex with minimum distance value, from
 // the set of vertices not yet included in shortest path tree
@@ -103,7 +102,10 @@ int main() {
                        {0, 0,  2, 0,  0,  0,  6, 7,  0}
     };*/
 
-    //extern int [V][V] graph;
+    int graph[V][V];
+    for (int i = 0; i < V; i++)
+        for (int j = 0; j < V; j++)
+            cin >> graph[i][j];
     dijkstra(graph, 0);
 
     return 0;
