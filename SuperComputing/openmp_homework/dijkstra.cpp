@@ -6,6 +6,7 @@
 #include <iostream>
 #include <omp.h>
 #include <boost/progress.hpp>
+#include <boost/multi_array.hpp>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ using namespace std;
 #endif
 
 // Number of vertices in the graph
-#define V 1250
+#define V 10000
 
 // A utility function to find the vertex with minimum distance value, from
 // the set of vertices not yet included in shortest path tree
@@ -41,7 +42,7 @@ int printSolution(int dist[], int n) {
 
 // Function that implements Dijkstra's single source shortest path algorithm
 // for a graph represented using adjacency matrix representation
-void dijkstra(int graph[][V], int src) {
+void dijkstra(boost::multi_array<int, 2> &graph, int src) {
     // Time counter
     boost::progress_timer progress;
 
@@ -84,7 +85,8 @@ void dijkstra(int graph[][V], int src) {
     // print the constructed distance array
     printSolution(dist, V);
     #ifdef MY_USE_OPENMP
-        printf("All %d threads use ", THREADS);
+        //printf("All %d threads use ", THREADS);
+        cout << "All " << THREADS << " threads use ";
     #endif
 }
 
@@ -101,8 +103,9 @@ int main() {
                        {8, 11, 0, 0,  0,  0,  1, 0,  7},
                        {0, 0,  2, 0,  0,  0,  6, 7,  0}
     };*/
+    boost::multi_array<int, 2> graph(boost::extents[V][V]);
+    ios::sync_with_stdio(false);
 
-    int graph[V][V];
     for (int i = 0; i < V; i++)
         for (int j = 0; j < V; j++)
             cin >> graph[i][j];
