@@ -10,9 +10,9 @@
 
 using namespace std;
 
-//#define MY_USE_OPENMP
+#define MY_USE_OPENMP
 #ifdef MY_USE_OPENMP
-    #define THREADS 8
+    #define THREADS 16
 #else
     #define THREADS 1
 #endif
