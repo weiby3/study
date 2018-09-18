@@ -17,7 +17,7 @@ endif()
 
 
 #set(CMAKE_TOOLCHAIN_FILE C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake)
-find_package(Eigen3 CONFIG REQUIRED)
+#find_package(Eigen3 CONFIG REQUIRED)
 find_package(Boost COMPONENTS
         program_options
         REQUIRED)
@@ -25,7 +25,7 @@ find_package(Boost COMPONENTS
 add_executable(${PROJECT_NAME}_ex1_tfidf tfidf.cpp tf.h idf.h)
 add_executable(${PROJECT_NAME}_ex1_knn knn.cpp one_hot.h)
 target_link_libraries(${PROJECT_NAME}_ex1_tfidf PRIVATE ${Boost_LIBRARIES})
-target_link_libraries(${PROJECT_NAME}_ex1_knn PRIVATE Eigen3::Eigen ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_ex1_knn PRIVATE ${Boost_LIBRARIES})
 
 include_directories(${Boost_INCLUDE_DIRS})
 

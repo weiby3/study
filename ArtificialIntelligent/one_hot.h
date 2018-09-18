@@ -21,7 +21,8 @@ enum EMOTION {
     FEAR = 2,
     JOY = 3,
     SAD = 4,
-    SURPRISE = 5
+    SURPRISE = 5,
+    UNKNOWN = 6
 };
 
 map<string, EMOTION> emotion{
@@ -31,6 +32,17 @@ map<string, EMOTION> emotion{
         {"joy", JOY},
         {"sad", SAD},
         {"surprise", SURPRISE},
+        {"?", UNKNOWN}
+};
+
+map<EMOTION, string> emotion_reverse{
+        {ANGER, "anger"},
+        {DISGUST, "disgust"},
+        {FEAR, "fear"},
+        {JOY, "joy"},
+        {SAD, "sad"},
+        {SURPRISE, "surprise"},
+        {UNKNOWN, "?"}
 };
 
 class OneHot{
@@ -49,12 +61,14 @@ private:
     map<int, vector<int>> one_hot_map;
     int one_hot_length;
     int unique_word_count;
+    int train_length;
 public:
-    OneHot():one_hot_length(0),unique_word_count(0){
+    OneHot():one_hot_length(0),unique_word_count(0),train_length(0){
 
     }
     // return text id
-    int addTextClassification(const string &str, const string &skip, const char_separator<char> &sep){
+    // train if train data, true; if validation data, false
+    int addTextClassification(const string &str, const string &skip, const char_separator<char> &sep, bool train){
         tokenizer<char_separator<char>> tok(str, sep);
         bool ready = false;
         vector<int> data;
@@ -74,6 +88,7 @@ public:
         }
         text_data.push_back(data);
         text_word_map.push_back(word);
+        train_length += train;
         return text_data.size()-1;
     }
     int getIdByString (const string &s){
@@ -85,10 +100,10 @@ public:
         }
         return p-1;
     }
-    vector<int>& getOneHotById(int id){
+    vector<int>& getOneHotByTextId(int text_id){
         vector<int> word;
-        auto &one_hot = one_hot_map[id];
-        for (auto i:text_word_map[id]){
+        auto &one_hot = one_hot_map[text_id];
+        for (auto i:text_word_map[text_id]){
             word.push_back(i.first);
         }
         sort(word.begin(),word.end());
@@ -116,6 +131,8 @@ public:
         return one_hot;
     }
     /*
+     * x one hot matrix
+     * y one hot matrix
      * p >= 0: L_p Distance
      * p <  0: Cosine Similarity
      */
@@ -142,6 +159,36 @@ public:
             ret = pow((long double)sum, pp);
         }
         return true;
+    }
+    EMOTION getEmotionByTextId(int text_id){
+        return text_classification_emotion[text_id];
+    }
+    /*
+     * k represent kNN's k
+     * p >= 0: L_p Distance
+     * p <  0: Cosine Similarity
+     */
+    EMOTION getEmotionByTextIdClassification(int text_id, int k, int p){
+        if (k>train_length){
+            return UNKNOWN;
+        }
+        vector<pair<int, long double>> distance_vector;
+        for (int i=0;i<train_length;i++){
+            long double r;
+            distance(getOneHotByTextId(text_id), getOneHotByTextId(i), r, p);
+            distance_vector.emplace_back(pair<int, long double>(i, r));
+        }
+        if (p < 0){
+            sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
+                return a.second > b.second;
+            });
+        }else{
+            sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
+                return a.second < b.second;
+            });
+        }
+        // emotion, count
+        map<EMOTION, int> emotion_count;
     }
 };
 

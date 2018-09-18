@@ -15,6 +15,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     progress_timer pt;
+    bool verbose;
     using namespace boost::program_options;
     int skip_lines;
     options_description desc("All Options");
@@ -23,7 +24,8 @@ int main(int argc, char *argv[]) {
             ("output,o", value<string>()->default_value("a.csv"), "Output filename, csv format")
             ("train,t", value<string>()->required(), "Train data set, csv format")
             ("validation,v", value<string>()->required(), "Validation data set, csv format")
-            ("skip-lines,s", value<int>(&skip_lines)->default_value(1), "Skip the `s` lines of the data set");
+            ("skip-lines,s", value<int>(&skip_lines)->default_value(1), "Skip the `s` lines of the data set")
+            ("verbose,V", value<bool>(&verbose)->default_value(false), "Output detailed information");
 
     variables_map vm;
     store(parse_command_line(argc, argv, desc), vm);
@@ -52,7 +54,7 @@ int main(int argc, char *argv[]) {
         if (sl-->0){
             continue;
         }
-        text_id.push_back(oh.addTextClassification(line, ",", sep));
+        text_id.push_back(oh.addTextClassification(line, ",", sep, true));
     }
     cout << "Debug\n";
 }
