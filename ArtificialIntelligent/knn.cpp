@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
     using namespace boost::program_options;
     int skip_lines;
     int pmax, kmax;
+    int poutput, koutput;
     options_description desc("All Options");
     desc.add_options()
             ("help,h", "Show this message")
@@ -30,6 +31,8 @@ int main(int argc, char *argv[]) {
             ("skip-lines,s", value<int>(&skip_lines)->default_value(1), "Skip the `s` lines of the data set")
             ("pmax", value<int>(&pmax)->default_value(3), "-1 <= p <= pmax")
             ("kmax", value<int>(&kmax)->default_value(25), "1 <= k <= kmax")
+            ("poutput", value<int>(&poutput)->default_value(-2), "when p == poutput display detail information")
+            ("koutput", value<int>(&koutput)->default_value(0), "when k == koutput display detail information")
             ("verbose,V", "Output detailed information");
 
     variables_map vm;
@@ -60,7 +63,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char_separator<char> sep(" ", ",");
+    char_separator<char> sep(" \r\n", ",");
     OneHot oh;
     string line;
 
@@ -99,18 +102,19 @@ int main(int argc, char *argv[]) {
         pkc(int p, int k, int correct, long double correct_rate):p(p), k(k), correct(correct), correct_rate(correct_rate) {}
     };
     vector<pkc> pkc_vector;
-    int k = 1, p = -1;
+    int k=1, p=-1;
+    int kpcount = 0;
     pkc_vector.reserve(static_cast<unsigned int>((pmax - p + 1) * (kmax - k + 1)));
-    for (;p<=pmax;p++){
-        for(;k<=kmax;k++){
+    for (p=-1;p<=pmax;p++){
+        for(k=1;k<=kmax;k++){
             int correct = 0;
             for(int i=0;i<len;i++){
                 EMOTION actual, predict;
                 actual = validation_actual_emotion_vector[i];
                 predict = oh.getEmotionByTextIdClassification(validation_text_id[i], k, p);
-                correct += actual==predict;
-                if (verbose2){
-                    printf("%10s%10s\n", emotion_reverse[actual].c_str(), emotion_reverse[predict].c_str());
+                correct += (actual==predict);
+                if (verbose2||(p==poutput && k==koutput)){
+                    printf("%10s:%10s\n", emotion_reverse[actual].c_str(), emotion_reverse[predict].c_str());
                 }
             }
             long double correct_rate = (long double)(correct * 100) / (long double)len;
@@ -122,6 +126,7 @@ int main(int argc, char *argv[]) {
                 cout << "Predict correctly: " << correct << endl;
                 cout << "Correct Rate: " << correct_rate << "%\n";
             }
+            kpcount++;
         }
     }
 
@@ -133,5 +138,7 @@ int main(int argc, char *argv[]) {
     cout << "All tags: " << len << endl;
     cout << "Predict correctly: " << pkc_vector[0].correct << endl;
     cout << "Correct Rate: " << setprecision(100) << pkc_vector[0].correct_rate << "%\n";
+    cout << "kpcount: " << kpcount << endl;
+    cout << "expected kpcount: " << (pmax - -1 + 1) * (kmax - 1 + 1) << endl;
     cout << "END" << endl;
 }

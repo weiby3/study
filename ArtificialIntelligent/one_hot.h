@@ -7,6 +7,7 @@
 #include <sstream>
 #include <algorithm>
 #include <iomanip>
+#include <iostream>
 #include <map>
 #include <cmath>
 
@@ -66,7 +67,16 @@ private:
     int train_length;
 public:
     OneHot():one_hot_length(0),unique_word_count(0),train_length(0){
-
+        //emotion["anger"] = ANGER;
+        //emotion["disgust"] = DISGUST;
+        //emotion["fear"] = FEAR;
+        //emotion["joy"] = JOY;
+        //emotion["sad"] = SAD;
+        //emotion["surprise"] = SURPRISE;
+        //emotion["?"] = UNKNOWN;
+        //for (auto &i:emotion) {
+        //    cout << i.first << ' ' << i.second << endl;
+        //}
     }
     // return text id
     // train if train data, true; if validation data, false
@@ -76,6 +86,7 @@ public:
         vector<int> data;
         map<int, int> word;
         for (auto &s: tok){
+            //cout << s << endl;
             if(!ready){
                 if (s==skip){
                     ready=true;
@@ -85,7 +96,12 @@ public:
                     data.push_back(id);
                 }
             } else{
-                text_classification_emotion.push_back(emotion[s]);
+                if (s.empty()){
+                    continue;
+                }
+                EMOTION emotion_tmp = emotion[s];
+                //cout << s << ":" << emotion_tmp << endl;
+                text_classification_emotion.push_back(emotion_tmp);
             }
         }
         text_data.push_back(data);
@@ -186,6 +202,7 @@ public:
         if (k>train_length){
             return UNKNOWN;
         }
+        // train text id, distance
         vector<pair<int, long double>> distance_vector(getDistanceVector(p, text_id));
         if (p < 0){
             sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
