@@ -23,13 +23,17 @@ find_package(Boost COMPONENTS
         REQUIRED)
 
 add_executable(${PROJECT_NAME}_ex1_tfidf tfidf.cpp tf.h idf.h)
-target_link_libraries(${PROJECT_NAME}_ex1_tfidf PRIVATE Eigen3::Eigen ${Boost_LIBRARIES})
+add_executable(${PROJECT_NAME}_ex1_knn knn.cpp one_hot.h)
+target_link_libraries(${PROJECT_NAME}_ex1_tfidf PRIVATE ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_ex1_knn PRIVATE Eigen3::Eigen ${Boost_LIBRARIES})
 
 include_directories(${Boost_INCLUDE_DIRS})
 
 if (MY_STATIC_LINK)
     set_target_properties(${PROJECT_NAME}_ex1_tfidf PROPERTIES LINK_SEARCH_START_STATIC 1)
     set_target_properties(${PROJECT_NAME}_ex1_tfidf PROPERTIES LINK_SEARCH_END_STATIC 1)
+    set_target_properties(${PROJECT_NAME}_ex1_knn PROPERTIES LINK_SEARCH_START_STATIC 1)
+    set_target_properties(${PROJECT_NAME}_ex1_knn PROPERTIES LINK_SEARCH_END_STATIC 1)
 
     set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 
