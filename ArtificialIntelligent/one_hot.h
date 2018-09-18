@@ -10,6 +10,8 @@
 #include <iostream>
 #include <map>
 #include <cmath>
+#include <numeric>
+#include <cstring>
 
 using namespace std;
 using namespace boost;
@@ -46,6 +48,22 @@ string emotion_reverse[]{
     "?"
 };
 
+struct emotion_array{
+    long double ea[EMOTION_COUNT]{};
+
+    emotion_array() {
+        memset(ea, 0 , sizeof(long double) * EMOTION_COUNT);
+    }
+    explicit emotion_array(const long double e_a[EMOTION_COUNT]) {
+        for (int i=0;i<EMOTION_COUNT;i++){
+            ea[i] = e_a[i];
+        }
+    }
+    long double& operator[](int i){
+        return ea[i];
+    }
+};
+
 class OneHot{
 private:
     // word, id
@@ -55,7 +73,7 @@ private:
     vector<vector<int>> text_data;
     // emotion, probability
     vector<EMOTION> text_classification_emotion;
-    vector<long double[EMOTION_COUNT]> text_regression_emotion;
+    vector<emotion_array> text_regression_emotion;
     // id, count/exist
     vector<map<int, int>> text_word_map;
     // text id
@@ -104,6 +122,39 @@ public:
                 text_classification_emotion.push_back(emotion_tmp);
             }
         }
+        text_data.push_back(data);
+        text_word_map.push_back(word);
+        train_length += train;
+        return text_data.size()-1;
+    }
+    // return text id
+    // train if train data, true; if validation data, false
+    int addTextRegression(const string &str, const string &skip, const char_separator<char> &sep, bool train){
+        tokenizer<char_separator<char>> tok(str, sep);
+        bool ready = false;
+        vector<int> data;
+        map<int, int> word;
+        int j = 0;
+        emotion_array _emotion_array;
+        for (auto &s: tok){
+            //cout << s << endl;
+            if(!ready){
+                if (s==skip){
+                    ready=true;
+                } else{
+                    int id=getIdByString(s);
+                    word[id]=true;
+                    data.push_back(id);
+                }
+            } else{
+                if (s.empty() || s==skip){
+                    continue;
+                }char *tmpend;
+                long double tmpld = strtold(s.c_str(), &tmpend);
+                _emotion_array[j++] = tmpld;
+            }
+        }
+        text_regression_emotion.push_back(_emotion_array);
         text_data.push_back(data);
         text_word_map.push_back(word);
         train_length += train;
@@ -227,6 +278,44 @@ public:
             }
         }
         return ret;
+    }
+    const emotion_array getEmotionByTextIdRegresionOrigin(int text_id){
+        return text_regression_emotion[text_id];
+    }
+    const emotion_array getEmotionByTextIdRegresion(int text_id, int k, int p){
+        long double ret[EMOTION_COUNT];
+        if (k>train_length){
+            return emotion_array(ret);
+        }
+        // train text id, distance
+        vector<pair<int, long double>> distance_vector(getDistanceVector(p, text_id));
+        if (p < 0){
+            sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
+                return a.second > b.second;
+            });
+        }else{
+            sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
+                return a.second < b.second;
+            });
+        }
+        for (long double &i : ret) {
+            i = 0;
+        }
+        for (int i=0;i<k;i++){
+            int id=distance_vector[i].first;
+            for (int j=0;j<EMOTION_COUNT;j++){
+                // train probability / distance
+                ret[j] += text_regression_emotion[id][j] / distance_vector[i].second;
+            }
+        }
+        long double sum = 0;
+        for (long double &i : ret) {
+            sum += i;
+        }
+        for (long double &i : ret) {
+            i /= sum;
+        }
+        return emotion_array(ret);
     }
 };
 
