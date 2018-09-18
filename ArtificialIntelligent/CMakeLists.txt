@@ -4,7 +4,7 @@ project(ArtificialIntelligent)
 
 set(CMAKE_CXX_STANDARD 11)
 set(Boost_DEBUG 1)
-set(MY_STATIC_LINK true)
+#set(MY_STATIC_LINK true)
 if (MY_STATIC_LINK)
     set(Boost_USE_STATIC_LIBS       ON)  # only find static libs
     #set(Boost_USE_DEBUG_LIBS        OFF) # ignore debug libs and

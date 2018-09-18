@@ -35,14 +35,14 @@ map<string, EMOTION> emotion{
         {"?", UNKNOWN}
 };
 
-map<EMOTION, string> emotion_reverse{
-        {ANGER, "anger"},
-        {DISGUST, "disgust"},
-        {FEAR, "fear"},
-        {JOY, "joy"},
-        {SAD, "sad"},
-        {SURPRISE, "surprise"},
-        {UNKNOWN, "?"}
+string emotion_reverse[]{
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sad",
+    "surprise",
+    "?"
 };
 
 class OneHot{
@@ -59,6 +59,8 @@ private:
     vector<map<int, int>> text_word_map;
     // text id
     map<int, vector<int>> one_hot_map;
+    // p, validation text id, train text id, distance
+    map<int, map<int, vector<pair<int, long double> > > > distance_map;
     int one_hot_length;
     int unique_word_count;
     int train_length;
@@ -130,6 +132,18 @@ public:
         }
         return one_hot;
     }
+    const vector<pair<int, long double>>& getDistanceVector(int p, int validation_text_id){
+        auto &dv = distance_map[p][validation_text_id];
+        if(dv.empty()){
+            dv.reserve(static_cast<unsigned int>(train_length));
+            for (int i=0;i<train_length;i++){
+                long double r;
+                distance(getOneHotByTextId(validation_text_id), getOneHotByTextId(i), r, p);
+                dv.emplace_back(pair<int, long double>(i, r));
+            }
+        }
+        return dv;
+    }
     /*
      * x one hot matrix
      * y one hot matrix
@@ -172,12 +186,7 @@ public:
         if (k>train_length){
             return UNKNOWN;
         }
-        vector<pair<int, long double>> distance_vector;
-        for (int i=0;i<train_length;i++){
-            long double r;
-            distance(getOneHotByTextId(text_id), getOneHotByTextId(i), r, p);
-            distance_vector.emplace_back(pair<int, long double>(i, r));
-        }
+        vector<pair<int, long double>> distance_vector(getDistanceVector(p, text_id));
         if (p < 0){
             sort(distance_vector.begin(), distance_vector.end(), [](const pair<int, long double> &a, const pair<int, long double> &b){
                 return a.second > b.second;
@@ -189,6 +198,18 @@ public:
         }
         // emotion, count
         map<EMOTION, int> emotion_count;
+        for (int i=0;i<k;i++){
+            emotion_count[getEmotionByTextId(distance_vector[i].first)]++;
+        }
+        int max_count=0;
+        EMOTION ret = UNKNOWN;
+        for(auto &i:emotion_count){
+            if(i.second>max_count){
+                max_count=i.second;
+                ret=i.first;
+            }
+        }
+        return ret;
     }
 };
 
