@@ -626,7 +626,7 @@ int main(int argc, char *argv[]) {
     unsigned int seed = 0;
     while (!b.terminate()) {
         if (who_play) {
-            ai_play(b, true, 4);
+            ai_play(b, true, 7);
         } else {
             random_play(b, seed);
         }
