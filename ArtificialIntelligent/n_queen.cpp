@@ -12,45 +12,64 @@ bool forwardCheck(int N, int row, vector<set<int>> &domains, int *shu, const fun
     if (domain.empty()) {
         return false;
     }
+    auto column_check = new bool[N];
+    memset(column_check, 0, sizeof(bool) * N);
+    auto column2_check = new bool[N];
+    memset(column2_check, 0, sizeof(bool) * N);
+    auto column3_check = new bool[N];
+    memset(column3_check, 0, sizeof(bool) * N);
     for (auto column:domain) {
         if (row == N - 1) {
             shu[column] = row + 1;
             if (callback(N, shu)) {
                 //shu[column] = 0;
+                delete[] column_check;
+                delete[] column2_check;
+                delete[] column3_check;
                 return true;
             }
             shu[column] = 0;
         } else {
             shu[column] = row + 1;
-            bool erase_column2 = false, erase_column3 = false;
             for (int i = row + 1; i < N; i++) {
-                domains[i].erase(column);
+                column_check[i] = domains[i].erase(column) > 0;
                 auto column2 = column + (i - row);
                 auto column3 = column - (i - row);
                 if (column2 < N) {
-                    domains[i].erase(column2);
+                    column2_check[i] = domains[i].erase(column2) > 0;
                 }
                 if (column3 >= 0) {
-                    domains[i].erase(column3);
+                    column3_check[i] = domains[i].erase(column3) > 0;
                 }
             }
             if (forwardCheck(N, row + 1, domains, shu, callback)) {
+                delete[] column_check;
+                delete[] column2_check;
+                delete[] column3_check;
                 return true;
             }
             for (int i = row + 1; i < N; i++) {
-                domains[i].emplace(column);
+                if (column_check[i]) {
+                    column_check[i] = false;
+                    domains[i].emplace(column);
+                }
                 auto column2 = column + (i - row);
                 auto column3 = column - (i - row);
-                if (column2 < N) {
+                if (column2 < N && column2_check[i]) {
+                    column2_check[i] = false;
                     domains[i].emplace(column2);
                 }
-                if (column3 >= 0) {
+                if (column3 >= 0 && column3_check[i]) {
+                    column3_check[i] = false;
                     domains[i].emplace(column3);
                 }
             }
             shu[column] = 0;
         }
     }
+    delete[] column_check;
+    delete[] column2_check;
+    delete[] column3_check;
     return false;
 }
 
@@ -205,8 +224,8 @@ int main(int argc, char *argv[]) {
     }
     using namespace std::placeholders;
     //function<bool(int, int *)> callback = bind(&displayOne, _1, _2, true);
-    function<bool(int, int *)> callback = bind(&displayOne, _1, _2, false);
-    //function<bool(int, int *)> callback = bind(&countOnly, _1, _2, false);
+    //function<bool(int, int *)> callback = bind(&displayOne, _1, _2, false);
+    function<bool(int, int *)> callback = bind(&countOnly, _1, _2, false);
 
     // backtrack
     /*auto flag = newFlag(N);
