@@ -1,6 +1,6 @@
 # CMakeLists.txt
 cmake_minimum_required(VERSION 3.0)
-project(ArtificialIntelligent LANGUAGES CXX)
+project(ArtificialIntelligent LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 17)
 #set(Boost_DEBUG 1)
@@ -22,7 +22,8 @@ if (MY_STATIC_LINK)
     #set(BOOST_LIBRARYDIR C:/msys64/mingw32/lib)
 endif ()
 
-set(CMAKE_CXX_FLAGS_DEBUG "-v -g3 -fstandalone-debug")
+#set(CMAKE_CXX_FLAGS_DEBUG "-v -g3 -fstandalone-debug")
+#set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
 #set(CMAKE_TOOLCHAIN_FILE C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake)
 #find_package(Eigen3 CONFIG REQUIRED)
@@ -36,11 +37,13 @@ add_executable(${PROJECT_NAME}_ex1_tfidf tfidf.cpp tf.h idf.h)
 add_executable(${PROJECT_NAME}_ex1_knn knn.cpp one_hot.h)
 add_executable(${PROJECT_NAME}_ex6_reversi reversi.cpp)
 add_executable(${PROJECT_NAME}_ex7_n_queen n_queen.cpp)
+add_executable(${PROJECT_NAME}_cuda_test cuda_test.cu)
+#set_target_properties(${PROJECT_NAME}_cuda_test PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 target_link_libraries(${PROJECT_NAME}_ex1_tfidf PRIVATE ${Boost_LIBRARIES})
 target_link_libraries(${PROJECT_NAME}_ex1_knn PRIVATE ${Boost_LIBRARIES})
-#target_link_libraries(${PROJECT_NAME}_ex6_reversi PRIVATE ${Boost_LIBRARIES} ${MPI_CXX_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_ex6_reversi PRIVATE ${Boost_LIBRARIES} ${MPI_CXX_LIBRARIES})
 
-include_directories(${Boost_INCLUDE_DIRS} ${MPI_CXX_INCLUDE_DIRS})
+include_directories(${Boost_INCLUDE_DIRS} ${MPI_CXX_INCLUDE_DIRS} /share/apps/cuda-9.0/samples/common/inc)
 
 if (MY_STATIC_LINK)
     set_target_properties(${PROJECT_NAME}_ex1_tfidf PROPERTIES LINK_SEARCH_START_STATIC 1)

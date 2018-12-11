@@ -3,96 +3,131 @@
 #include <cstring>
 #include <cstdlib>
 #include <vector>
-#include <set>
+#include <map>
 
 using namespace std;
 
-bool forwardCheck(int N, int row, vector<set<int>> &domains, int *shu, const function<bool(int, int *)> &callback) {
+bool deprecatedForwardCheck(int N, int row, vector<map<int, int>> &domains, int *shu,
+                            const function<bool(int, int *)> &callback) {
     auto &&domain = domains[row];
     if (domain.empty()) {
         return false;
     }
-    auto column_check = new bool[N];
-    memset(column_check, 0, sizeof(bool) * N);
-    auto column2_check = new bool[N];
-    memset(column2_check, 0, sizeof(bool) * N);
-    auto column3_check = new bool[N];
-    memset(column3_check, 0, sizeof(bool) * N);
     for (auto column:domain) {
-        if (row == N - 1) {
-            shu[column] = row + 1;
-            if (callback(N, shu)) {
-                //shu[column] = 0;
-                delete[] column_check;
-                delete[] column2_check;
-                delete[] column3_check;
-                return true;
-            }
-            shu[column] = 0;
-        } else {
-            shu[column] = row + 1;
-            for (int i = row + 1; i < N; i++) {
-                column_check[i] = domains[i].erase(column) > 0;
-                auto column2 = column + (i - row);
-                auto column3 = column - (i - row);
-                if (column2 < N) {
-                    column2_check[i] = domains[i].erase(column2) > 0;
-                }
-                if (column3 >= 0) {
-                    column3_check[i] = domains[i].erase(column3) > 0;
-                }
-            }
-            if (forwardCheck(N, row + 1, domains, shu, callback)) {
-                delete[] column_check;
-                delete[] column2_check;
-                delete[] column3_check;
-                return true;
-            }
-            for (int i = row + 1; i < N; i++) {
-                if (column_check[i]) {
-                    column_check[i] = false;
-                    domains[i].emplace(column);
-                }
-                auto column2 = column + (i - row);
-                auto column3 = column - (i - row);
-                if (column2 < N && column2_check[i]) {
-                    column2_check[i] = false;
-                    domains[i].emplace(column2);
-                }
-                if (column3 >= 0 && column3_check[i]) {
-                    column3_check[i] = false;
-                    domains[i].emplace(column3);
-                }
-            }
-            shu[column] = 0;
-        }
-    }
-    delete[] column_check;
-    delete[] column2_check;
-    delete[] column3_check;
-    return false;
-}
-
-bool backtrack(int N, int row, int *flag[3], const function<bool(int, int *)> &callback) {
-    auto shu = flag[0];
-    auto pie = flag[1];
-    auto na = flag[2];
-    for (int column = 0; column < N; column++) {
-        auto j = row + column;
-        auto k = N - 1 - row + column;
-        if (shu[column] || pie[j] || na[k]) {
+        if (column.second != 1) {
             continue;
         }
         if (row == N - 1) {
-            shu[column] = pie[j] = na[k] = row + 1;
+            shu[column.first] = row + 1;
+            if (callback(N, shu)) {
+                //shu[column] = 0;
+                return true;
+            }
+            shu[column.first] = 0;
+        } else {
+            shu[column.first] = row + 1;
+            for (int i = row + 1; i < N; i++) {
+                //domains[i].erase(column);
+                domains[i][column.first]--;
+                auto column2 = column.first + (i - row);
+                auto column3 = column.first - (i - row);
+                if (column2 < N) {
+                    domains[i][column2]--;
+                }
+                if (column3 >= 0) {
+                    domains[i][column3]--;
+                }
+            }
+            if (deprecatedForwardCheck(N, row + 1, domains, shu, callback)) {
+                return true;
+            }
+            for (int i = row + 1; i < N; i++) {
+                //domains[i].emplace(column);
+                domains[i][column.first]++;
+                auto column2 = column.first + (i - row);
+                auto column3 = column.first - (i - row);
+                if (column2 < N) {
+                    domains[i][column2]++;
+                }
+                if (column3 >= 0) {
+                    domains[i][column3]++;
+                }
+            }
+            shu[column.first] = 0;
+        }
+    }
+    return false;
+}
+
+bool validBoard(int N, int x, int y, bool **board) {
+    for (int i = x - 1; i >= 0; i--) {
+        if (board[i][y]) {
+            return false;
+        }
+    }
+    for (int i = x - 1, j = y - 1; i >= 0 && j >= 0; i--, j--) {
+        if (board[i][j]) {
+            return false;
+        }
+    }
+    for (int i = x - 1, j = y + 1; i >= 0 && j < N; i--, j++) {
+        if (board[i][j]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+bool backtrack(int N, int row, int *shu, bool **board, const function<bool(int, int *)> &callback) {
+    for (int column = 0; column < N; column++) {
+        if (validBoard(N, row, column, board)) {
+            shu[row] = column + 1;
+            board[row][column] = true;
+            if (row == N - 1) {
+                if (callback(N, shu)) {
+                    return true;
+                }
+            } else {
+                if (backtrack(N, row + 1, shu, board, callback)) {
+                    return true;
+                }
+            }
+            shu[row] = 0;
+            board[row][column] = false;
+        }
+    }
+    return false;
+}
+
+bool forwardCheck(int N, int row, int **flag, const function<bool(int, int *)> &callback) {
+    auto shu = flag[0];
+    auto pie = flag[1];
+    auto na = flag[2];
+    auto nm1 = N - 1;
+    auto rp1 = row + 1;
+    for (int column = 0; column < N; column++) {
+        if (shu[column]) {
+            continue;
+        }
+        auto j = row + column;
+        if (pie[j]) {
+            continue;
+        }
+        auto k = nm1 - row + column;
+        if (na[k]) {
+            continue;
+        }
+        if (row == nm1) {
+            shu[column] = pie[j] = na[k] = rp1;
             if (callback(N, shu)) {
                 shu[column] = pie[j] = na[k] = 0;
                 return true;
             }
             shu[column] = pie[j] = na[k] = 0;
         } else {
-            shu[column] = pie[j] = na[k] = row + 1;
-            if (backtrack(N, row + 1, flag, callback)) {
+            shu[column] = pie[j] = na[k] = rp1;
+            if (forwardCheck(N, rp1, flag, callback)) {
                 return true;
             }
             shu[column] = pie[j] = na[k] = 0;
@@ -193,6 +228,7 @@ bool countOnly(int N, int *column, bool return_value) {
 int **newFlag(int N) {
     auto flag = new int *[3];
     auto array = new int[5 * N - 2];
+    memset(array, 0, sizeof(int) * (5 * N - 2));
     flag[0] = array;
     flag[1] = array + N;
     flag[2] = array + (3 * N - 1);
@@ -204,13 +240,12 @@ void deleteFlag(int **flag) {
     delete[] flag;
 }
 
-vector<set<int>> makeDomains(int N) {
-    vector<set<int>> domains;
-    domains.reserve(static_cast<unsigned long>(N));
+vector<map<int, int>> makeDomains(int N) {
+    vector<map<int, int>> domains;
     for (int i = 0; i < N; i++) {
-        set<int> domain;
+        map<int, int> domain;
         for (int j = 0; j < N; j++) {
-            domain.insert(j);
+            domain[j] = 1;
         }
         domains.emplace_back(domain);
     }
@@ -218,26 +253,45 @@ vector<set<int>> makeDomains(int N) {
 }
 
 int main(int argc, char *argv[]) {
-    int N = 5;
-    if (argc > 1) {
+    int N = 32;
+    int choice = 1;
+    if (argc == 2) {
         N = atoi(argv[1]);
+    } else if (argc == 3) {
+        choice = atoi(argv[1]);
+        N = atoi(argv[2]);
     }
     using namespace std::placeholders;
-    //function<bool(int, int *)> callback = bind(&displayOne, _1, _2, true);
+    function<bool(int, int *)> callback = bind(&displayOne, _1, _2, true);
     //function<bool(int, int *)> callback = bind(&displayOne, _1, _2, false);
-    function<bool(int, int *)> callback = bind(&countOnly, _1, _2, false);
+    //function<bool(int, int *)> callback = bind(&countOnly, _1, _2, false);
 
-    // backtrack
+    // forwardCheck
     /*auto flag = newFlag(N);
-    backtrack(N, 0, flag, callback);
+    forwardCheck(N, 0, flag, callback);
     deleteFlag(flag);*/
 
     // forward check
-    auto shu = new int[N];
+    /*auto shu = new int[N];
     memset(shu, 0, sizeof(int) * N);
     auto domains = makeDomains(N);
-    forwardCheck(N, 0, domains, shu, callback);
-    delete[] shu;
+    deprecatedForwardCheck(N, 0, domains, shu, callback);
+    delete[] shu;*/
+
+    if (choice == 1) {
+        auto flag = newFlag(N);
+        forwardCheck(N, 0, flag, callback);
+        deleteFlag(flag);
+    } else if (choice == 2) {
+        auto shu = new int[N];
+        memset(shu, 0, sizeof(int) * N);
+        auto board = newBoard(N);
+        backtrack(N, 0, shu, board, callback);
+        deleteBoard(board);
+        delete[] shu;
+    } else {
+        cerr << "Not Implemented!\n";
+    }
 
     cout << solutionCount << endl;
 }
