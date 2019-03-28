@@ -3,30 +3,21 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="super_computing_homework" targetName="test_gfl_chip" />
-      <config projectName="super_computing_homework" targetName="openmp_homework_dijkstra" />
-      <config projectName="super_computing_homework" targetName="openmp_homework_producer_consumer" />
-      <config projectName="super_computing_homework" targetName="test_test" />
-      <config projectName="super_computing_homework" targetName="pthreads_read_write_lock" />
-      <config projectName="super_computing_homework" targetName="simd_homework" />
-      <config projectName="super_computing_homework" targetName="simd_homework_test_double" />
-      <config projectName="super_computing_homework" targetName="openmp_homework_multi_producer_multi_consumer" />
-      <config projectName="super_computing_homework" targetName="test_test2" />
-      <config projectName="super_computing_homework" targetName="simd_homework_test_int" />
+      <config projectName="CompilerTheory" targetName="CompilerTheory_04_02" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug-MinGW-w32" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW-w32" BUILD_OPTIONS="-j 8">
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" BUILD_OPTIONS="-j8">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
             <env name="BOOST_ROOT" value="C:\msys64\mingw32\include\" />
           </envs>
         </ADDITIONAL_GENERATION_ENVIRONMENT>
       </configuration>
-      <configuration PROFILE_NAME="Release-MinGW-w32" CONFIG_NAME="Release" TOOLCHAIN_NAME="MinGW-w32" BUILD_OPTIONS="-j 8">
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" BUILD_OPTIONS="-j4">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
             <env name="BOOST_ROOT" value="C:\msys64\mingw32\include\" />
@@ -36,95 +27,62 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/Experiment1/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/Experiment1/image_rotate.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseOfHighPerformanceComputing/Experiment1/image_smooth.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SuperComputing/test/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SuperComputing/test/gfl_chip.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SuperComputing/test/test.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SuperComputing/test/test2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperComputing/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SuperComputing/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperComputing/openmp_homework/dijkstra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SuperComputing/openmp_homework/dijkstra.cpp" afterDir="false" />
+    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="CompilerTheory 04_02 Finished.">
+      <change afterPath="$PROJECT_DIR$/CompilerTheory/04_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CompilerTheory/04_02_Input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/SuperComputing/simd_homework/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-release/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-release-mingw-w32/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug-mingw-w32/" />
+    <ignored path="$PROJECT_DIR$/CompilerTheory/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/CompilerTheory/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-MinGW-w32" />
-  <component name="FUSProjectUsageTrigger">
-    <session id="-700290396">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="cmake" value="1" />
-          <entry key="cpp" value="7" />
-          <entry key="future" value="1" />
-          <entry key="h" value="4" />
-          <entry key="hpp" value="2" />
-          <entry key="py" value="1" />
-          <entry key="system_error" value="11" />
-          <entry key="test_001 (disassembly)" value="1" />
-          <entry key="test_002 (disassembly)" value="3" />
-          <entry key="test_gfl_chip (disassembly)" value="18" />
-          <entry key="test_test2 (disassembly)" value="1" />
-          <entry key="txt" value="11" />
-          <entry key="vmoptions" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="12" />
-          <entry key="Disassembly" value="23" />
-          <entry key="ObjectiveC" value="25" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="GDB" value="7" />
-          <entry key="cpp" value="1974" />
-          <entry key="mm" value="15" />
-          <entry key="txt" value="158" />
-          <entry key="vmoptions" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CMakeLists.txt" value="158" />
-          <entry key="GDBCommands" value="7" />
-          <entry key="ObjectiveC" value="1989" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.cidr.testingFrameworks.usages" />
-    </session>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02_Input">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="5" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -175,6 +133,9 @@
         <option value="$PROJECT_DIR$/SuperComputing/test/test2.cpp" />
         <option value="$PROJECT_DIR$/SuperComputing/test/gfl_chip.cpp" />
         <option value="$PROJECT_DIR$/SuperComputing/test/test.cpp" />
+        <option value="$PROJECT_DIR$/CompilerTheory/04_02_Input" />
+        <option value="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CompilerTheory/04_02.cpp" />
       </list>
     </option>
   </component>
@@ -186,9 +147,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="x" value="120" />
+    <option name="y" value="124" />
+    <option name="width" value="720" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -200,19 +162,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="super_computing_homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CompilerTheory" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="super_computing_homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CompilerTheory" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="SuperComputing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="super_computing_homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="SuperComputing" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="CompilerTheory" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,11 +177,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CompilerTheory" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -239,58 +203,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test_test">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="openmp_homework_dijkstra" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="CMake Application.CompilerTheory_04_02">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="openmp_homework_dijkstra" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openmp_homework_dijkstra" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&lt; data.txt &gt; output_debug.txt" WORKING_DIR="file://$PROJECT_DIR$/SuperComputing/openmp_homework" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="openmp_homework_dijkstra" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="openmp_homework_dijkstra">
+    <configuration name="CompilerTheory_04_02" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="CompilerTheory_04_02" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="CompilerTheory_04_02">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openmp_homework_multi_producer_multi_consumer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="openmp_homework_multi_producer_multi_consumer" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="openmp_homework_multi_producer_multi_consumer">
+    <configuration name="openmp_homework_dijkstra" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&lt; data.txt &gt; output_debug.txt" WORKING_DIR="file://$PROJECT_DIR$/SuperComputing/openmp_homework" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="openmp_homework_dijkstra" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="openmp_homework_dijkstra">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openmp_homework_producer_consumer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="openmp_homework_producer_consumer" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="openmp_homework_producer_consumer">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="pthreads_read_write_lock" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="64" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="pthreads_read_write_lock" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="pthreads_read_write_lock">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="simd_homework" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="simd_homework" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="simd_homework">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="simd_homework_test_double" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="simd_homework_test_double" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="simd_homework_test_double">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="simd_homework_test_int" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="simd_homework_test_int" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="simd_homework_test_int">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_gfl_chip" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="test_gfl_chip" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="test_gfl_chip">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="test_test" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="test_test">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_test2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="super_computing_homework" TARGET_NAME="test_test2" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="super_computing_homework" RUN_TARGET_NAME="test_test2">
+    <configuration name="pthreads_read_write_lock" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="64" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="pthreads_read_write_lock" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="pthreads_read_write_lock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -317,17 +246,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.openmp_homework_dijkstra" />
-      <item itemvalue="Application.openmp_homework_multi_producer_multi_consumer" />
-      <item itemvalue="Application.openmp_homework_producer_consumer" />
-      <item itemvalue="Application.pthreads_read_write_lock" />
-      <item itemvalue="Application.simd_homework" />
-      <item itemvalue="Application.simd_homework_test_double" />
-      <item itemvalue="Application.simd_homework_test_int" />
-      <item itemvalue="Application.test_gfl_chip" />
-      <item itemvalue="Application.test_test" />
-      <item itemvalue="Application.test_test2" />
+      <item itemvalue="CMake Application.Build All" />
+      <item itemvalue="CMake Application.openmp_homework_dijkstra" />
+      <item itemvalue="CMake Application.pthreads_read_write_lock" />
+      <item itemvalue="CMake Application.CompilerTheory_04_02" />
       <item itemvalue="Python.generateGraph" />
     </list>
     <recent_temporary>
@@ -359,6 +281,8 @@
       <workItem from="1536069353937" duration="420000" />
       <workItem from="1536260105612" duration="8101000" />
       <workItem from="1536507593532" duration="14000" />
+      <workItem from="1549546154200" duration="399000" />
+      <workItem from="1553742661685" duration="12128000" />
     </task>
     <task id="LOCAL-00001" summary="Add simd_homework.">
       <created>1527445987821</created>
@@ -406,31 +330,32 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71513000" />
+    <option name="totallyTimeSpent" value="84040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="-20" width="960" height="1012" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1684435" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17396061" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35791758" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3325868" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5195969" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="CMake" order="7" visible="true" weight="0.3167028" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286334" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.31690928" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281075" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.33442265" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3267974" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3253796" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32586786" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32474804" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Cargo" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,9 +386,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add simd_homework." />
@@ -472,7 +408,8 @@
     <MESSAGE value="Use `unsigned long long` instead `int` to avoid overflow in openmp homework 3." />
     <MESSAGE value="Add dijkstra source." />
     <MESSAGE value="Use `boost::multi_array` instead of `int [][]` to store graph data, speed up data reading." />
-    <option name="LAST_COMMIT_MESSAGE" value="Use `boost::multi_array` instead of `int [][]` to store graph data, speed up data reading." />
+    <MESSAGE value="CompilerTheory 04_02 Finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="CompilerTheory 04_02 Finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,8 +454,23 @@
           <line>158</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CompilerTheory/04_02.cpp</url>
+          <line>158</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CompilerTheory/04_02.cpp</url>
+          <line>117</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="ds.st" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -529,6 +481,11 @@
       </expression>
     </expressions>
     <expressions id="watch">
+      <expression>
+        <expression-string>ds.st</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>combinations</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -542,31 +499,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SuperComputing/simd_homework/ccpuid.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="613" column="13" selection-start-line="613" selection-start-column="13" selection-end-line="613" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperComputing/simd_homework/simdsumint.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperComputing/simd_homework/canny_edge.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="638" column="77" lean-forward="true" selection-start-line="638" selection-start-column="77" selection-end-line="638" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperComputing/simd_homework/pthreads_read_write_lock.cpp" />
-    <entry file="file://C:/MinGW/include/pthread.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="882" column="17" selection-start-line="882" selection-start-column="17" selection-end-line="882" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/MinGW/include/pthread.h" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/my_rand.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -581,11 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperComputing/cmake-build-debug/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11898" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperComputing/cmake-build-debug/CMakeCache.txt" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/pthreads_link_list_read_write_lock.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -600,39 +530,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer_fwd.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214" />
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer/base.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="820" column="9" selection-start-line="820" selection-start-column="9" selection-end-line="820" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/winnt.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="286" column="19" selection-start-line="286" selection-start-column="19" selection-end-line="286" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/iostream">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer_fwd.hpp" />
+    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer.hpp" />
+    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer/base.hpp" />
+    <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/winnt.h" />
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/iostream" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/my_read_write_lock.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -647,20 +549,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/stl_numeric.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/wingdi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="2831" column="56" selection-start-line="2831" selection-start-column="56" selection-end-line="2831" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/stl_numeric.h" />
+    <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/wingdi.h" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/openmp_homework/multi_producer_multi_consumer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -675,20 +565,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/clion64.exe.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/progress.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="49" column="82" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/clion64.exe.vmoptions" />
+    <entry file="file://C:/msys64/mingw32/include/boost/progress.hpp" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/openmp_homework/generateGraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -703,20 +581,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/share/cmake-3.12/Modules/FindBoost.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="2043" selection-start-line="2043" selection-end-line="2043" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/future">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="795" selection-start-line="795" selection-end-line="795" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/share/cmake-3.12/Modules/FindBoost.cmake" />
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/future" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -724,20 +590,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/atomic_futex.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="251" selection-start-line="251" selection-end-line="251" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/char_traits.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="380" selection-start-line="380" selection-end-line="380" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/atomic_futex.h" />
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/char_traits.h" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/openmp_homework/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -776,13 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/basic_string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="2064" column="8" selection-start-line="2064" selection-start-column="8" selection-end-line="2064" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/basic_string.h" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/test/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -790,27 +638,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/stl_deque.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/process/detail/child_decl.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/system_error">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/bits/stl_deque.h" />
+    <entry file="file://C:/msys64/mingw32/include/boost/process/detail/child_decl.hpp" />
+    <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/system_error" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/test/gfl_chip.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3082">
@@ -838,6 +668,67 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtificialIntelligent/cuda_test.cu">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtificialIntelligent/tf.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtificialIntelligent/n_queen.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtificialIntelligent/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="true" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="779" selection-start-line="779" selection-end-line="779" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_algobase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="383" selection-start-line="383" selection-end-line="383" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02_Input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
