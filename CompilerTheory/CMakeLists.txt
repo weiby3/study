@@ -12,15 +12,17 @@ if (MY_STATIC_LINK)
     set(Boost_USE_STATIC_RUNTIME ON)
 endif ()
 
-#set(CMAKE_CXX_FLAGS_DEBUG "-v -g3 -fstandalone-debug")
+set(CMAKE_CXX_FLAGS_DEBUG "-g3 -fstandalone-debug")
 #set(CMAKE_VERBOSE_MAKEFILE TRUE)
 #set(CMAKE_CXX_FLAGS_DEBUG "-g3 -fsanitize=undefined,integer,address -fno-omit-frame-pointer")
 #set(CMAKE_CXX_FLAGS_DEBUG "-g3 -fsanitize=undefined,address -fno-omit-frame-pointer")
 
 add_executable(${PROJECT_NAME}_04_02 04_02.cpp)
+add_executable(${PROJECT_NAME}_05_01 05_01.cpp)
 
 if (MY_STATIC_LINK)
     set_target_properties(${PROJECT_NAME}_04_02 PROPERTIES LINK_SEARCH_START_STATIC 1)
+    set_target_properties(${PROJECT_NAME}_05_01 PROPERTIES LINK_SEARCH_START_STATIC 1)
 
     set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 

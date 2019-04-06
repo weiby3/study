@@ -5,10 +5,11 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="CompilerTheory" targetName="CompilerTheory_05_01" />
       <config projectName="CompilerTheory" targetName="CompilerTheory_04_02" />
     </generated>
   </component>
-  <component name="CMakeSettings" AUTO_RELOAD="true">
+  <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" BUILD_OPTIONS="-j8">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
@@ -27,14 +28,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="CompilerTheory 04_02 Finished.">
-      <change afterPath="$PROJECT_DIR$/CompilerTheory/04_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompilerTheory/04_02_Input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CompilerTheory/05_01.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/SuperComputing/simd_homework/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug/" />
@@ -49,23 +48,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="294">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -74,10 +73,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02_Input">
+        <entry file="file://$PROJECT_DIR$/CompilerTheory/05_01.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="5" selection-end-line="26" />
+            <state relative-caret-position="14">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,23 +136,18 @@
         <option value="$PROJECT_DIR$/SuperComputing/test/gfl_chip.cpp" />
         <option value="$PROJECT_DIR$/SuperComputing/test/test.cpp" />
         <option value="$PROJECT_DIR$/CompilerTheory/04_02_Input" />
-        <option value="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CompilerTheory/04_02.cpp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CompilerTheory/05_01.cpp" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="120" />
-    <option name="y" value="124" />
-    <option name="width" value="720" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -203,13 +200,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.CompilerTheory_04_02">
+  <component name="RunManager" selected="CMake Application.CompilerTheory_05_01">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="openmp_homework_dijkstra" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="CompilerTheory_04_02" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="CompilerTheory_04_02" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="CompilerTheory_04_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompilerTheory_05_01" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="CompilerTheory_05_01" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="CompilerTheory_05_01">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -247,9 +249,10 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.Build All" />
+      <item itemvalue="CMake Application.CompilerTheory_04_02" />
+      <item itemvalue="CMake Application.CompilerTheory_05_01" />
       <item itemvalue="CMake Application.openmp_homework_dijkstra" />
       <item itemvalue="CMake Application.pthreads_read_write_lock" />
-      <item itemvalue="CMake Application.CompilerTheory_04_02" />
       <item itemvalue="Python.generateGraph" />
     </list>
     <recent_temporary>
@@ -330,26 +333,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84040000" />
+    <option name="totallyTimeSpent" value="92000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-20" width="960" height="1012" extended-state="6" />
+    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17396061" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3325868" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5195969" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.33186328" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5192944" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.31690928" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.3164278" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281075" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.33442265" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32586786" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32474804" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32414553" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -464,13 +468,13 @@
           <line>117</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CompilerTheory/05_01.cpp</url>
+          <line>133</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="ds.st" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -499,15 +503,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SuperComputing/simd_homework/pthreads_read_write_lock.cpp" />
-    <entry file="file://C:/MinGW/include/pthread.h" />
-    <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/my_rand.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/timer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -687,27 +682,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="779" selection-start-line="779" selection-end-line="779" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_algobase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="383" selection-start-line="383" selection-end-line="383" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h" />
+    <entry file="file:///usr/include/c++/5/bits/stl_algobase.h" />
+    <entry file="file:///usr/include/c++/5/bits/vector.tcc" />
     <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02_Input">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -715,20 +692,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="6345" column="4" selection-start-line="6345" selection-start-column="4" selection-end-line="6345" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="294">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/05_01.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
