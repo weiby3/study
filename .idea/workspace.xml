@@ -5,8 +5,8 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="CompilerTheory" targetName="CompilerTheory_05_01" />
-      <config projectName="CompilerTheory" targetName="CompilerTheory_04_02" />
+      <config projectName="Multicore" targetName="Multicore_hw1_cuda" />
+      <config projectName="Multicore" targetName="Multicore_hw1_omp" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -28,12 +28,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CompilerTheory/05_01.cpp" afterDir="false" />
+    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="CompilerTheory 05_01 Finished.">
+      <change afterPath="$PROJECT_DIR$/Multicore/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Multicore/hw1_cuda.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Multicore/hw1_omp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/SuperComputing/simd_homework/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug/" />
@@ -42,6 +43,8 @@
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug-mingw-w32/" />
     <ignored path="$PROJECT_DIR$/CompilerTheory/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CompilerTheory/cmake-build-release/" />
+    <ignored path="$PROJECT_DIR$/Multicore/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/Multicore/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,35 +53,53 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/Multicore/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="80">
+              <caret line="22" column="128" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+        <entry file="file://$PROJECT_DIR$/Multicore/hw1_cuda.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+            <state relative-caret-position="42">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Multicore/hw1_omp.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="4" selection-end-column="3" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#112#128#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompilerTheory/05_01.cpp">
+        <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/chrono">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+            <state relative-caret-position="96">
+              <caret line="877" column="14" selection-start-line="877" selection-start-column="10" selection-end-line="877" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.3.0/include/omp.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1429">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#2187#2239#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +121,7 @@
       <find>xxx</find>
       <find>pp</find>
       <find>002</find>
+      <find>high</find>
     </findStrings>
     <replaceStrings>
       <replace>write</replace>
@@ -140,12 +162,14 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CompilerTheory/05_01.cpp" />
+        <option value="$PROJECT_DIR$/Multicore/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Multicore/hw1_omp.cpp" />
+        <option value="$PROJECT_DIR$/Multicore/hw1_cuda.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -153,25 +177,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CompilerTheory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompilerTheory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="CompilerTheory" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -200,28 +206,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.CompilerTheory_05_01">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="openmp_homework_dijkstra" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Application.Multicore_hw1_omp">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Multicore" RUN_TARGET_NAME="openmp_homework_dijkstra" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompilerTheory_04_02" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="CompilerTheory_04_02" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="CompilerTheory_04_02">
+    <configuration name="Multicore_hw1_cuda" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Multicore" TARGET_NAME="Multicore_hw1_cuda" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Multicore" RUN_TARGET_NAME="Multicore_hw1_cuda">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompilerTheory_05_01" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="CompilerTheory_05_01" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="CompilerTheory_05_01">
+    <configuration name="Multicore_hw1_omp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Multicore" TARGET_NAME="Multicore_hw1_omp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Multicore" RUN_TARGET_NAME="Multicore_hw1_omp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openmp_homework_dijkstra" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&lt; data.txt &gt; output_debug.txt" WORKING_DIR="file://$PROJECT_DIR$/SuperComputing/openmp_homework" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="openmp_homework_dijkstra" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="openmp_homework_dijkstra">
+    <configuration name="openmp_homework_dijkstra" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&lt; data.txt &gt; output_debug.txt" WORKING_DIR="file://$PROJECT_DIR$/SuperComputing/openmp_homework" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Multicore" TARGET_NAME="openmp_homework_dijkstra" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="Multicore" RUN_TARGET_NAME="openmp_homework_dijkstra">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pthreads_read_write_lock" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="64" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CompilerTheory" TARGET_NAME="pthreads_read_write_lock" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="CompilerTheory" RUN_TARGET_NAME="pthreads_read_write_lock">
+    <configuration name="pthreads_read_write_lock" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="64" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Multicore" TARGET_NAME="pthreads_read_write_lock" CONFIG_NAME="Debug-MinGW-w32" RUN_TARGET_PROJECT_NAME="Multicore" RUN_TARGET_NAME="pthreads_read_write_lock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -248,11 +254,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="CMake Application.Build All" />
-      <item itemvalue="CMake Application.CompilerTheory_04_02" />
-      <item itemvalue="CMake Application.CompilerTheory_05_01" />
-      <item itemvalue="CMake Application.openmp_homework_dijkstra" />
-      <item itemvalue="CMake Application.pthreads_read_write_lock" />
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.Multicore_hw1_cuda" />
+      <item itemvalue="Application.Multicore_hw1_omp" />
+      <item itemvalue="Application.openmp_homework_dijkstra" />
+      <item itemvalue="Application.pthreads_read_write_lock" />
       <item itemvalue="Python.generateGraph" />
     </list>
     <recent_temporary>
@@ -286,6 +292,11 @@
       <workItem from="1536507593532" duration="14000" />
       <workItem from="1549546154200" duration="399000" />
       <workItem from="1553742661685" duration="12128000" />
+      <workItem from="1554552523122" duration="2012000" />
+      <workItem from="1554555538482" duration="339000" />
+      <workItem from="1554556056276" duration="125000" />
+      <workItem from="1554563990958" duration="2015000" />
+      <workItem from="1554647901869" duration="7625000" />
     </task>
     <task id="LOCAL-00001" summary="Add simd_homework.">
       <created>1527445987821</created>
@@ -329,14 +340,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530607987450</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CompilerTheory 05_01 Finished.">
+      <created>1554552756288</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554552756288</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92000000" />
+    <option name="totallyTimeSpent" value="104116000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.30666667" />
@@ -351,15 +369,17 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.3164278" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281075" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.33442265" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011111" side_tool="true" weight="0.33406836" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32586786" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32414553" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49888888" visible="true" weight="0.32414553" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Cargo" order="4" />
+      <window_info anchor="right" id="JuliaSciView" order="5" />
+      <window_info anchor="right" id="make" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +426,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Add simd_homework." />
     <MESSAGE value="Add super computing homework 2, homework 3 is in progress." />
     <MESSAGE value="Use static link." />
@@ -413,7 +434,8 @@
     <MESSAGE value="Add dijkstra source." />
     <MESSAGE value="Use `boost::multi_array` instead of `int [][]` to store graph data, speed up data reading." />
     <MESSAGE value="CompilerTheory 04_02 Finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="CompilerTheory 04_02 Finished." />
+    <MESSAGE value="CompilerTheory 05_01 Finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="CompilerTheory 05_01 Finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -503,29 +525,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/timer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperComputing/cmake-build-debug/CMakeCache.txt" />
-    <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/pthreads_link_list_read_write_lock.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer_fwd.hpp" />
     <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer.hpp" />
     <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer/base.hpp" />
     <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/winnt.h" />
@@ -604,24 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseOfHighPerformanceComputing/Experiment1/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperComputing/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseOfHighPerformanceComputing/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -706,30 +691,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="78">
+          <caret line="135" column="7" lean-forward="true" selection-start-line="135" selection-start-column="7" selection-end-line="135" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompilerTheory/05_01.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        <state relative-caret-position="102">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CompilerTheory/04_02.cpp">
+    <entry file="file://$PROJECT_DIR$/CompilerTheory/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+        <state relative-caret-position="63">
+          <caret line="3" lean-forward="true" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseOfHighPerformanceComputing/Experiment1/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseOfHighPerformanceComputing/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.3.0/include/omp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1429">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2187#2239#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="877" column="14" selection-start-line="877" selection-start-column="10" selection-end-line="877" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multicore/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="22" column="128" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multicore/hw1_omp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <element signature="e#112#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multicore/hw1_cuda.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
