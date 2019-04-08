@@ -28,13 +28,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="CompilerTheory 05_01 Finished.">
-      <change afterPath="$PROJECT_DIR$/Multicore/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Multicore/hw1_cuda.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Multicore/hw1_omp.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cf254b65-1197-46b3-b135-f2cb201dc50a" name="Default" comment="Multicore homework 1 part 1 OpenMP version finished.">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multicore/hw1_omp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Multicore/hw1_omp.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/SuperComputing/simd_homework/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/SuperComputing/cmake-build-debug/" />
@@ -57,50 +54,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Multicore/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="22" column="128" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
+            <state relative-caret-position="462">
+              <caret line="22" column="128" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Multicore/hw1_cuda.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state>
               <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Multicore/hw1_omp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="4" selection-end-column="3" />
-              <folding>
-                <element signature="e#112#128#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/chrono">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="877" column="14" selection-start-line="877" selection-start-column="10" selection-end-line="877" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.3.0/include/omp.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1429">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
-              <folding>
-                <element signature="e#2187#2239#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-178">
+              <caret line="67" column="57" lean-forward="true" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -130,6 +103,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -163,8 +137,8 @@
         <option value="$PROJECT_DIR$/CompilerTheory/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CompilerTheory/05_01.cpp" />
         <option value="$PROJECT_DIR$/Multicore/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Multicore/hw1_omp.cpp" />
         <option value="$PROJECT_DIR$/Multicore/hw1_cuda.cpp" />
+        <option value="$PROJECT_DIR$/Multicore/hw1_omp.cpp" />
       </list>
     </option>
   </component>
@@ -177,7 +151,25 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Multicore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Multicore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="Multicore" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -187,7 +179,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -296,7 +288,8 @@
       <workItem from="1554555538482" duration="339000" />
       <workItem from="1554556056276" duration="125000" />
       <workItem from="1554563990958" duration="2015000" />
-      <workItem from="1554647901869" duration="7625000" />
+      <workItem from="1554647901869" duration="9340000" />
+      <workItem from="1554721675195" duration="3603000" />
     </task>
     <task id="LOCAL-00001" summary="Add simd_homework.">
       <created>1527445987821</created>
@@ -347,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554552756288</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Multicore homework 1 part 1 OpenMP version finished.">
+      <created>1554677305699</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554677305699</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104116000" />
+    <option name="totallyTimeSpent" value="109434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1040" extended-state="0" />
@@ -368,10 +368,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.3164278" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281075" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32745314" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011111" side_tool="true" weight="0.33406836" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32586786" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49888888" visible="true" weight="0.32414553" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49888888" weight="0.37596473" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,7 +435,8 @@
     <MESSAGE value="Use `boost::multi_array` instead of `int [][]` to store graph data, speed up data reading." />
     <MESSAGE value="CompilerTheory 04_02 Finished." />
     <MESSAGE value="CompilerTheory 05_01 Finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="CompilerTheory 05_01 Finished." />
+    <MESSAGE value="Multicore homework 1 part 1 OpenMP version finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Multicore homework 1 part 1 OpenMP version finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -495,6 +496,11 @@
           <line>133</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Multicore/hw1_omp.cpp</url>
+          <line>48</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -525,8 +531,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer.hpp" />
-    <entry file="file://C:/msys64/mingw32/include/boost/circular_buffer/base.hpp" />
     <entry file="file://C:/msys64/mingw32/i686-w64-mingw32/include/winnt.h" />
     <entry file="file://C:/msys64/mingw32/include/c++/7.3.0/iostream" />
     <entry file="file://$PROJECT_DIR$/SuperComputing/pthreads_read_write_lock/my_read_write_lock.h">
@@ -732,9 +736,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Multicore/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="128" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multicore/hw1_cuda.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.3.0/include/omp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1429">
+        <state>
           <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#2187#2239#0" expanded="true" />
@@ -742,34 +760,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/chrono">
+    <entry file="file://C:/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="877" column="14" selection-start-line="877" selection-start-column="10" selection-end-line="877" selection-end-column="14" />
+        <state relative-caret-position="401">
+          <caret line="243" column="30" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
+          <folding>
+            <element signature="e#6632#6852#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multicore/CMakeLists.txt">
+    <entry file="file://C:/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="22" column="128" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="128" />
+        <state relative-caret-position="292">
+          <caret line="413" column="70" selection-start-line="413" selection-start-column="70" selection-end-line="413" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="596" column="56" lean-forward="true" selection-start-line="596" selection-start-column="56" selection-end-line="596" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Multicore/hw1_omp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="3" />
-          <folding>
-            <element signature="e#112#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multicore/hw1_cuda.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="-178">
+          <caret line="67" column="57" lean-forward="true" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
         </state>
       </provider>
     </entry>

@@ -78,10 +78,11 @@ int main(int argc, char *argv[]) {
   }
   auto end_time = chrono::high_resolution_clock::now();
 
-  if (*penv != '\0') {
-    cout << chrono::duration_cast<chrono::microseconds>(end_time - start_time)
+  if (penv != nullptr) {
+    /*cout << chrono::duration_cast<chrono::microseconds>(end_time - start_time)
                 .count()
-         << endl;
+         << endl;*/
+    cout << (end_time - start_time).count() << endl;
   } else {
     for (int i = 0; i < s6p1; i++) {
       for (int j = 0; j < s6p1; j++) {
@@ -90,7 +91,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  //delete[] xyarr;
+  // delete[] xyarr;
   delete_float_array(ppf);
   return 0;
 }
